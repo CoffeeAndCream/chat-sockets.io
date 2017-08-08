@@ -1,0 +1,29 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+h3, h6 {
+  font-family: 'Rakkas', cursive;
+}
+
+#messages li {
+  padding: 5px 10px;
+  list-style: none;
+}
+#messages li:nth-child(odd) {
+  background: #eee;
+}
+#messageBox {
+  max-height: 500px;
+  overflow-y: auto;
+}
+@media screen and (max-height: 600px) {
+  #messageBox {
+    max-height: 200px;
+  }
+}
+#messagingForm {
+  display: inline-block;
+}
+.delete-message {
+  float:right;
+  cursor: pointer;
+  font-family: 'Rakkas', cursive;
+}

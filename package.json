@@ -1,0 +1,22 @@
+{
+  "name": "chat-app",
+  "version": "0.0.1",
+  "description": "my first socket.io app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "chat",
+    "socket.io",
+    "messaging"
+  ],
+  "author": "Sean Hulse",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "popups": "^1.1.3",
+    "socket.io": "^2.0.3"
+  }
+}

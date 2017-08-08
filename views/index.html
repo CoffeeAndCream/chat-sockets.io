@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="stylesheets/modal.css" rel="stylesheet"/>
+    <link href="stylesheets/messages.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-lg-4" >
+        <div class="row" id="whoseOnlineBox">
+          <h3>Whose Online</h3>
+          <div id="whoseOnline">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="row" id="messageBox">
+          <h3>Messages</h3>
+          <ul id="messages"></ul>
+        </div>
+        <div class="row" id="messageFormBox">
+          <form class="form-group form-inline" id="messagingForm" action="">
+            <input class="form-control" id="m" autocomplete="off"  placeholder="Write a message" />
+            <button class="btn btn-md btn-primary" id="messagingSubmit">Send</button>
+          </form>
+          <a href="#changeUsernameModal" id="changeUsernameBtn" role="button" class="btn btn-large btn-primary" data-toggle="modal">Change Username</a>
+        </div>
+        <div class="user-typing"></div>
+      </div>
+      <div id="changeUsernameModal" class="modal fade">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title">Change Username</h4>
+                      <div class="alert alert-danger" style="display: none;" role="alert">
+                        <strong>Holy guacamole!</strong> That name has been taken!
+                      </div>
+                  </div>
+                  <div class="modal-body">
+                    <form class="form-group"  id="changeUsername" action="">
+                      <input class="form-control" id="username" autocomplete="off" placeholder="Choose a username" />
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button class="btn btn-md btn-primary">Change</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  <script src = "/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src = "javascript/socket.js" type='text/javascript'></script>
+  <script src = "javascript/message.js" type='text/javascript'></script>
+  </body>
+</html>
+<!--

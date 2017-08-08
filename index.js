@@ -10,6 +10,9 @@ var views = path.join(__dirname, 'views');
 app.use(express.static(publicPath));
 app.use(express.static(views));
 
+var port = process.env.PORT || 8080;
+
+
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
@@ -70,6 +73,6 @@ io.on('connection', function(socket) {
   })
 });
 
-http.listen(3000, function() {
-  console.log("listening on port 3000");
+http.listen(port, function() {
+  console.log("listening on port " + port);
 });
